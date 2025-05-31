@@ -24,7 +24,7 @@ A responsive Weather Search web application built using **HTML, CSS, JavaScript,
 
 ## 📸 Demo
 
-![Weather App Demo](demo-screenshot.png) <!-- Optional: Replace with actual screenshot -->
+![Weather App Demo](./img/screencapture-weather-application-three-pi-vercel-app-2025-05-31-14_16_19.png); 
 
 ---
 
