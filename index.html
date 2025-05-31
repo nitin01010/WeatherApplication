@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Application Task</title>
+  <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body class="bg-white text-black">
+  <!-- Header -->
+  <header class="flex justify-center items-center bg-yellow-300 h-[60px]">
+    <h1 class="text-2xl font-bold text-white">Weather Application</h1>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex flex-col lg:flex-row gap-0 min-h-screen">
+    <!-- Left Panel -->
+    <section class="bg-white border-b-2 lg:border-b-0 lg:border-r-2 border-gray-200 w-full lg:w-[40%]">
+
+      <div class="flex py-5 relative justify-center  items-center">
+        <input type="text" id="cityName" placeholder="Dhaka, Bangladesh"
+          class=" py-5 pb-12  bg-[#f2f2f2]  relative rounded-t-lg outline-none  px-5 w-[90%] text-black" />
+        <div id="listSearc"
+          class=" z-10 border-white border-t-2 absolute overflow-scroll w-[90%] h-[60px] py-2 mt-[78px] rounded-b-lg px-3 bg-[#f2f2f2]">
+        </div>
+        <img src="https://img.icons8.com/ios-filled/50/search--v1.png" id="Search"
+          class="cursor-pointer z-50 absolute w-[23px] right-[50px] top-[35px]" alt="SearchIcon" />
+        <img src="./img/placeholder.png" id="Location"
+          class="cursor-pointer   absolute w-[20px] md:w-[30px]  right-[0px] md:top-[30px] " alt="SearchIcon" />
+      </div>
+
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" id="WeatherImageIcon"
+          class="object-contain m-auto w-28 mt-14" />
+        <p class="text-5xl text-center mt-5" id="tem">31°C</p>
+        <p class="text-lg text-center mt-3 font-light" id="wethername">Mostly Cloudy</p>
+      </div>
+
+      <div class="p-1 bg-[#f2f2f2] mt-5 w-[80%] m-auto rounded-full"></div>
+
+      <div class="flex flex-col text-gray-700 items-center p-2 mt-10">
+        <p class="py-2 text-2xl" id="timeandDate">Saturday, 1 June 2025 - 3:45 PM</p>
+        <p class="py-1 text-lg" id="Country">Bangladesh</p>
+      </div>
+
+      <p class="text-center mt-5 py-5 mb-20 text-3xl" id="StateName">Dhaka</p>
+    </section>
+
+    <!-- Right Panel -->
+    <section class="w-full lg:w-[60%] bg-gray-100">
+      <div class="flex text-2xl gap-10 py-8 justify-start items-center h-[40px] px-10">
+        <p class="cursor-pointer font-bold underline decoration-wavy  ">Today<span>Weather</span></p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-10 px-10 place-items-center">
+        <div
+          class="WeatherBox   font-light bg-white border-2 border-gray-200 w-full max-w-[250px] h-[170px] p-8 shadow-md rounded-md hover:bg-yellow-300 hover:text-white transition-all ease-linear">
+          <p class="text-xl text-gray-400 -mt-2">Wind</p>
+          <p class="text-lg mt-3" id="Wind">15 km/h</p>
+          <p class="text-lg mt-1" id="wind_dir">North-East</p>
+        </div>
+
+        <div
+          class="WeatherBox   font-light bg-white border-2 border-gray-200 w-full max-w-[250px] h-[170px] p-8 shadow-md rounded-md hover:bg-yellow-300 hover:text-white transition-all ease-linear">
+          <p class="text-xl text-gray-400 -mt-2">Humidity</p>
+          <p class="text-2xl mt-5" id="humidity">78%</p>
+        </div>
+
+        <div
+          class="WeatherBox   font-light bg-white border-2 border-gray-200 w-full max-w-[250px] h-[170px] p-8 shadow-md rounded-md hover:bg-yellow-300 hover:text-white transition-all ease-linear">
+          <p class="text-xl text-gray-400 -mt-2">Real Feel</p>
+          <p class="text-2xl mt-5" id="feelslike_c">33°C</p>
+        </div>
+
+        <div
+          class="WeatherBox   font-light bg-white border-2 border-gray-200 w-full max-w-[250px] h-[170px] p-8 shadow-md rounded-md hover:bg-yellow-300 hover:text-white transition-all ease-linear">
+          <p class="text-xl text-gray-400 -mt-2">UV Index</p>
+          <p class="text-2xl mt-2 py-2" id="Uv">6 (High)</p>
+        </div>
+
+        <div
+          class="WeatherBox   font-light bg-white border-2 border-gray-200 w-full max-w-[250px] h-[170px] p-8 shadow-md rounded-md hover:bg-yellow-300 hover:text-white transition-all ease-linear">
+          <p class="text-xl text-gray-400 -mt-2">Pressure</p>
+          <p class="text-2xl mt-2 py-2" id="pressure">1012 hPa</p>
+        </div>
+
+        <div
+          class="WeatherBox   font-light bg-white border-2 border-gray-200 w-full max-w-[250px] h-[170px] p-8 shadow-md rounded-md hover:bg-yellow-300 hover:text-white transition-all ease-linear">
+          <p class="text-xl text-gray-400 -mt-2">Chance of Rain</p>
+          <p class="text-2xl mt-2 py-2" id="chanceOfRain">42%</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
